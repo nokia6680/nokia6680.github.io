@@ -1,0 +1,460 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+@font-face {
+	font-family: "ProximaNova";
+	src: url("../fonts/ProximaNovaRegular.eot");
+	src: url("../fonts/ProximaNovaRegular.eot?#iefix") format("embedded-opentype"),
+	url("../fonts/ProximaNovaRegular.woff") format("woff"),
+	url("../fonts/ProximaNovaRegular.ttf") format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "ProximaNova";
+	src: url("../fonts/ProximaNovaBold.eot");
+	src: url("../fonts/ProximaNovaBold.eot?#iefix") format("embedded-opentype"),
+	url("../fonts/ProximaNovaBold.woff") format("woff"),
+	url("../fonts/ProximaNovaBold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: "Myriad Pro";
+	src: url("../fonts/MyriadPro-Regular.eot");
+	src: url("../fonts/MyriadPro-Regular.eot?#iefix") format("embedded-opentype"),
+	url("../fonts/MyriadPro-Regular.woff") format("woff"),
+	url("../fonts/MyriadPro-Regular.ttf") format("truetype");
+  font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Myriad Pro";
+	src: url("../fonts/MyriadPro-Bold.eot");
+	src: url("../fonts/MyriadPro-Bold.eot?#iefix") format("embedded-opentype"),
+	url("../fonts/MyriadPro-Bold.woff") format("woff"),
+	url("../fonts/MyriadPro-Bold.ttf") format("truetype");
+	font-style: normal;
+	font-weight: bold;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+body {
+  background-image: url('../img/ellipse.jpg');
+  background-repeat: no-repeat;
+  background-position: top right;
+  width: 1920px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+input {
+  font-family: "ProximaNova", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 26px;
+  color: #646464;
+}
+
+.container {
+  width: 1100px;
+  padding: 0;
+  margin: 220px auto 75px auto;
+  background-color: #ffffff;
+  /*Тень пока временно, чтобы границы видеть*/
+  box-shadow: 0px 43px 100px 0px rgba(0, 0, 0, 0.35);
+  text-shadow: 0px 43px 100px rgba(0, 0, 0, 0.35);
+
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.order {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1100px;
+  height: 620px;
+}
+
+.order__aside {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+
+  width: 365px;
+
+  background-color: #1a8bfb;
+
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+}
+
+.aside__description {
+  padding-top: 35px;
+}
+
+.aside__description,
+.aside__form,
+.aside__rates {
+  padding-left: 40px;
+}
+
+.aside__action {
+  font-family: "ProximaNova", sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 36px;
+  color: #ffffff;
+
+  margin: 0;
+
+  margin-bottom: 10px;
+}
+
+.aside__name {
+  font-family: "Myriad Pro", sans-serif;
+  font-size: 48px;
+  line-height: 36px;
+  font-weight: bold;
+  color: #ffffff;
+
+  padding-bottom: 15px;
+  padding-right: 60px;
+
+  width: 281px;
+  border-bottom: 1px solid #7db6ed;
+
+}
+
+.form {
+  margin-bottom: 30px;
+}
+
+.form__item {
+  margin: 0;
+  padding: 0;
+
+  margin-bottom: 16px;
+}
+
+.form__item:last-of-type {
+  margin-bottom: 38px;
+}
+
+.form__field {
+  border: none;
+  border-radius: 30px;
+  width: 280px;
+
+  padding-left: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  outline: none;
+  cursor: pointer;
+}
+
+.order__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  width: 735px;
+
+  padding-left: 50px;
+  padding-top: 35px;
+
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.form__description {
+  font-family: "Myriad Pro", sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: normal;
+  color: #ffffff;
+
+  padding-left: 25px;
+  padding-right: 40px;
+
+  margin-top: 55px;
+  margin-bottom: 35px;
+
+  text-align: center;
+  width: 272px;
+}
+
+.controls__title {
+  font-family: "Myriad Pro", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: normal;
+  color: #ffffff;
+
+  padding-left: 49px;
+}
+
+.controls__block {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 172px;
+
+  margin-left: 48px;
+  margin-top: 10px;
+}
+
+.controls__btn--prev {
+  height: 39px;
+  width: 45px;
+
+  background-color: #0061ce;
+
+  border: none;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+
+  cursor: pointer;
+  outline: none;
+}
+
+.controls__btn--next {
+  height: 39px;
+  width: 45px;
+
+  background-color: #0061ce;
+  padding: 0;
+  padding-right: 10px;
+
+  border: none;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+
+  cursor: pointer;
+  outline: none;
+}
+
+.controls__input {
+  font-family: "ProximaNova", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 24px;
+  color: #1a8bfb;
+
+  width: 70px;
+  text-align: center;
+
+  height: 39px;
+}
+
+.aside__rates {
+  margin-left: 20px;
+}
+
+.rates-item__usd,
+.rates-item__rub {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  color: #ffffff;
+}
+
+.details__header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  padding-top: 45px;
+  padding-bottom: 35px;
+
+  box-sizing: border-box;
+  border-bottom: 1px solid #b9b9b9;
+
+  width: 630px;
+}
+
+.details__title {
+  margin: 0;
+  padding: 0;
+
+  font-family: "ProximaNova", sans-serif;
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 24px;
+  color: #8a8a8a;
+}
+
+.details__date {
+  font-family: "ProximaNova", sans-serif;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 24px;
+  color: #8a8a8a;
+
+  margin-left: auto;
+}
+
+.details__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.info__title {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 23px;
+  font-weight: normal;
+  line-height: 24px;
+  color: #8a8a8a;
+
+  align-self: flex-start;
+
+  margin-top: 37px;
+  margin-bottom: 45px;
+}
+
+.info__description {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  color: #8a8a8a;
+
+  margin-bottom: 23px;
+  margin-right: 75px;
+}
+
+.info__quantity {
+  align-self: flex-end;
+
+  font-family: "Myriad Pro", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: normal;
+  color: #e6881d;
+
+  margin-top: 0;
+  margin-bottom: 20px;
+  margin-right: 80px;
+}
+
+.info__checkout {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 630px;
+  padding-bottom: 30px;
+}
+
+.checkout__total {
+  font-family: "ProximaNova", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  line-height: 24px;
+  color: #0070dd;
+
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.checkout__btn {
+  border: none;
+  border-radius: 30px;
+  width: 248px;
+
+  font-family: "Myriad Pro", sans-serif;
+  font-size: 28px;
+  line-height: 28px;
+  font-weight: normal;
+  color: #ffffff;
+
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  margin-left: auto;
+
+  color: #fef4e9;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fdcd60), to(#df7c1e));
+	background: -moz-linear-gradient(top,  #fdcd60,  #df7c1e);
+
+  box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.35);
+
+  cursor: pointer;
+  outline: none;
+}
+
+.payment {
+  width: 1100px;
+  height: 105px;
+  background-color: #ffffff;
+
+  margin: 0 auto 60px auto;
+
+  border-radius: 15px;
+
+  box-shadow: 0px 43px 100px 0px rgba(0, 0, 0, 0.35);
+  text-shadow: 0px 43px 100px rgba(0, 0, 0, 0.35);
+}
+
+.payment__methods {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  align-items: center;
+  margin: 0 auto;
+  padding-top: 10px;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.payment__methods li {
+  width: 120px;
+  text-align: center;
+}
