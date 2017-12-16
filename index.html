@@ -1,86 +1,285 @@
 <!DOCTYPE html>
-<html lang="ru">
-<head>
-  <meta charset="utf-8">
-  <title>form</title>
-  <link rel="stylesheet" href="css/style.css">
-  <link href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&amp;subset=cyrillic,cyrillic-ext" rel="stylesheet">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="format-detection" content="telephone=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-</head>
-<body>
-  <div class="order container">
-    <aside class="order__aside aside">
-      <div class="aside__description">
-        <h3 class="aside__action">Оплата товара:</h3>
-        <b class="aside__name">TKEYCOIN</b>
-      </div>
-      <form class="aside__form form" action="#" method="post">
-        <p class="form__description">Введите Ваши данные покупателя в&nbsp;форму&nbsp;ниже</p>
-        <p class="form__item">
-          <input class="form__field form__field--name" type="text" name="form-name" value="Ф.И.О" id="form-name">
-        </p>
-        <p class="form__item">
-          <input class="form__field form__field--mail" type="email" name="form-email" value="E-mail" id="form-mail">
-        </p>
-        <p class="form__item">
-          <input class="form__field form__field--tel" type="tel" name="form-phone" value="Номер телефона" id="form-tel">
-        </p>
-        <div class="form__controls controls">
-          <div class="controls__label">
-            <label class="controls__title" for="quantity">введите количество TC</label>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Playfair+Display:400,400i,700,700i,900,900i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <title>ArchitectureX</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="main-header__container">
+        <nav class="main-header__navigation main-navigation">
+          <div class="main-navigation__logo">
+            <a class="main-navigation__link" href="#">Architecture</a><span class="link-last">X</span>
           </div>
-          <div class="controls__block">
-            <button class="controls__btn--prev" type="button">
-              <svg class="controls__decrease" width="38" height="38" fill="#ffffff">
-                <polygon points="13.5,18.5 24.5,18.5 24.5,21.5 20.5,21.5, 13.5,21.5"/>
-              </svg>
-              <span class="visually-hidden">Минус</span>
-            </button>
-            <input class="controls__input" type="text" name="quantity" id="quantity" value="2">
-            <button class="controls__btn--next" type="button">
-              <svg class="controls__increase" width="38" height="38" fill="#ffffff">
-                <polygon points="13.5,18.5 17.5,18.5 17.5,14.5 20.5,14.5 20.5,18.5 24.5,18.5 24.5,21.5 20.5,21.5, 20.5,25.5 17.5,25.5 17.5,21.5 13.5,21.5"/>
-              </svg>
-              <span class="visually-hidden">Плюс</span>
-            </button>
+          <button class="main-navigation__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
+          <ul class="main-navigation__list navigation-list">
+            <li class="navigation-list__item">
+              <a class="navigation-list__link" href="#">Home</a>
+            </li>
+            <li class="navigation-list__item">
+              <a class="navigation-list__link" href="#">Projects</a>
+            </li>
+            <li class="navigation-list__item">
+              <a class="navigation-list__link" href="#">What we do</a>
+            </li>
+            <li class="navigation-list__item">
+              <a class="navigation-list__link" href="#">About us</a>
+            </li>
+            <li class="navigation-list__item">
+              <a class="navigation-list__link" href="#">Contact us</a>
+            </li>
+            <li class="navigation-list__item">
+              <a class="navigation-list__link" href="#"><i class="fa fa-search"></i></a>
+            </li>
+          </ul>
+        </nav>
+        <section class="main-header__intro header-intro">
+          <i class="fa fa-angle-left fa-angle-left--desktop"></i>
+          <div class="header-intro__wrapper">
+            <h2 class="header-intro__title">Architecture Template</h2>
+            <p class="header-intro__preview">Built with Bootstrap</p>
+            <a class="header-intro__information" href="#">Learn more</a>
           </div>
+          <i class="fa fa-angle-right fa-angle-right--desktop"></i>
+        </section>
+        <div class="main-header__paginator paginator">
+          <a class="paginator__item" href="#"><span class="paginator__nr visually-hidden">1</span></a>
+          <a class="paginator__item paginator__item--current" href="#"><span class="paginator__nr visually-hidden">2</span></a>
+          <a class="paginator__item" href="#"><span class="paginator__nr visually-hidden">3</span></a>
         </div>
-      </form>
-      <div class="aside__rates rates-item">
-        <span class="rates-item__usd">1 TC = 0,021 USD</span>
-        <span class="rates-item__rub">TC = 9 RUR</span>
       </div>
-    </aside>
-    <section class="order__details details">
-      <div class="details__header">
-        <h2 class="details__title">Счет для оплаты заказа №511</h2>
-        <time class="details__date" datetime="2016-12-12 15-00">12 декабря, 15:00</time>
+    </header>
+
+    <main class="main-about">
+    <section class="main-about__services services">
+      <div class="services__block block-intro">
+        <h2 class="block-intro__title">Our services</h2>
+        <b class="block-intro__header">&amp;</b>
+        <p class="block-intro__description">Built is the template designed specially for architectures and builders. So start building you web site with built.</p>
       </div>
-      <div class="details__info info">
-        <h2 class="info__title">Бонус: +40% от любой суммы покупки TKEYCOIN</h2>
-        <p class="info__description">После оплаты в течении 5 минут - 3 часов, на указанный Вами e-mail адрес, будет отправлен доступ к Личному кабинету (Логин и Пароль) http://lk.tkeycoin.com/,
-          в&nbsp;котором будет отображено количество купленных Tkeycoin + Вам будет начислен бонус в размере 40%.</p>
-        <p class="info__description">Письмо будет содержать Логин и Пароль для доступа в Личный кабинет, а также ссылку для входа http://lk.tkeycoin.com/</p>
-        <p class="info__description">Если у Вас возникли вопросы, то свяжитесь с нашей службой поддержки support@tkey.biz или +7(499)899-45-89</p>
-      </div>
-      <p class="info__quantity">Вам будет начислено: 0 TC</p>
-      <div class="info__checkout checkout">
-        <p class="checkout__total">Всего к оплате: 1000 руб. </p>
-        <button class="checkout__btn" type="submit">Оплатить</button>
+      <ul class="services__list inner-list">
+        <li class="inner-list__item inner-item">
+          <div class="inner-item__box">
+            <i class="fa fa-file-zip-o"></i>
+          </div>
+          <div class="inner-item__details">
+            <a class="inner-item__title" href="#">Consulting</a>
+            <p class="inner-item__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            <div class="divider"></div>
+          </div>
+        </li>
+        <li class="inner-list__item inner-item">
+          <div class="inner-item__box">
+            <i class="fa fa-pencil"></i>
+          </div>
+          <div class="inner-item__details">
+            <a class="inner-item__title" href="#">Design</a>
+            <p class="inner-item__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            <div class="divider"></div>
+          </div>
+        </li>
+        <li class="inner-list__item inner-item">
+          <div class="inner-item__box">
+            <i class="fa fa-clock-o"></i>
+          </div>
+          <div class="inner-item__details">
+            <a class="inner-item__title" href="#">Planning</a>
+            <p class="inner-item__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            <div class="divider"></div>
+          </div>
+        </li>
+        <li class="inner-list__item inner-item">
+          <div class="inner-item__box">
+            <i class="fa fa-home"></i>
+          </div>
+          <div class="inner-item__details">
+            <a class="inner-item__title" href="#">Building</a>
+            <p class="inner-item__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+            <div class="divider"></div>
+          </div>
+        </li>
+      </ul>
+    </section>
+    <section class="main-about__partners partners"> <!--Parallax-->
+      <div class="partners__container">
+        <p class="partners__title">Felis dolor integer facilisis habitasse a himenaeos urna aliqua</p>
       </div>
     </section>
-  </div>
-  <div class="payment">
-    <ul class="payment__methods">
-      <li><a href="#"><img src="img/visa.svg" width="120" height="80px"></a></li>
-      <li><a href="#"><img src="img/mastercard.svg" width="110" height="80px"></a></li>
-      <li><a href="#"><img src="img/qiwi.svg" width="78" height="80px"></a></li>
-      <li><a href="#"><img src="img/webmoney.svg" width="80" height="80px"></a></li>
-      <li><a href="#"><img src="img/yamoney.svg" width="70" height="80px"></a></li>
-      <li><a href="#"><img src="img/secure.png" width="80" height="80px"></a></li>
-    </ul>
-  </div>
-</body>
+    <section class="main-about__examples examples">
+      <div class="examples__block block-intro">
+        <h2 class="block-intro__title">Our projects</h2>
+        <b class="block-intro__header">&amp;</b>
+        <p class="block-intro__description">Some of the projects we have done since it was founded.</p>
+      </div>
+      <button class="examples__toggle" type="button">Menu</button>
+      <ul class="examples__navigation examples-list">
+        <li class="examples-list__item">
+          <a class="examples-list__link" href="#">All projects</a>
+          <div class="underline"></div>
+        </li>
+        <li class="examples-list__item">
+          <a class="examples-list__link" href="#">Buildings</a>
+          <div class="underline"></div>
+        </li>
+        <li class="examples-list__item">
+          <a class="examples-list__link" href="#">Interior design</a>
+          <div class="underline"></div>
+        </li>
+        <li class="examples-list__item">
+          <a class="examples-list__link" href="#">Isolation</a>
+          <div class="underline"></div>
+        </li>
+        <li class="examples-list__item">
+          <a class="examples-list__link" href="#">Plumbing</a>
+          <div class="underline"></div>
+        </li>
+        <li class="examples-list__item">
+          <a class="examples-list__link" href="#">Tiling</a>
+          <div class="underline"></div>
+        </li>
+      </ul>
+      <div class="main-about__gallery gallery">
+        <div class="gallery__item">
+          <img class="gallery__picture" src="img/gallery-1.jpg" alt="example-1" width="255" height="160">
+        </div>
+        <div class="gallery__item"> <!--БЛОК С ЭФФЕКТОМ!!!-->
+          <img class="gallery__picture" src="img/gallery-2.jpg" alt="example-2" width="255" height="160">
+        </div>
+        <div class="gallery__item">
+          <img class="gallery__picture" src="img/gallery-3.jpg" alt="example-5" width="255" height="160">
+        </div>
+        <div class="gallery__item">
+          <img class="gallery__picture" src="img/gallery-4.jpg" alt="example-6" width="255" height="160">
+        </div>
+        <div class="gallery__item">
+          <img class="gallery__picture" src="img/gallery-5.jpg" alt="example-3" width="255" height="160">
+        </div>
+        <div class="gallery__item">
+          <img class="gallery__picture" src="img/gallery-6.jpg" alt="example-4" width="255" height="160">
+        </div>
+        <div class="gallery__item">
+          <img class="gallery__picture" src="img/gallery-7.jpg" alt="example-7" width="255" height="160">
+        </div>
+        <div class="gallery__item">
+          <img class="gallery__picture" src="img/gallery-8.jpg" alt="example-7" width="255" height="160">
+        </div>
+      </div>
+      <button class="gallery__btn" type="button">View all projects<i class="fa fa-long-arrow-right"></i></button>
+    </section>
+    <section class="main-about__clients clients">
+      <i class="fa fa-arrow-left"></i>
+      <ul class="clients__list clients-list">
+        <li class="clients-list__item">
+          <a class="clients-list__link"><img class="clients-list__image" src="img/logo1.png"></a>
+        </li>
+        <li class="clients-list__item">
+          <a class="clients-list__link"><img class="clients-list__image" src="img/logo2.png"></a>
+        </li>
+        <li class="clients-list__item">
+          <a class="clients-list__link"><img class="clients-list__image" src="img/logo3.png"></a>
+        </li>
+        <li class="clients-list__item">
+          <a class="clients-list__link"><img class="clients-list__image" src="img/logo4.png"></a>
+        </li>
+        <li class="clients-list__item">
+          <a class="clients-list__link"><img class="clients-list__image" src="img/logo5.png"></a>
+        </li>
+      </ul>
+      <i class="fa fa-arrow-right"></i>
+    </section>
+    <section class="main-about__response response">
+      <div class="response__block block-intro">
+        <h2 class="block-intro__title block-intro__title--white">What they say</h2>
+        <b class="block-intro__header block-intro__header--white">&amp;</b>
+      </div>
+      <div class="response__area people-area">
+        <article class="people-area__item area-item">
+          <div class="area-item__photo">
+            <i class="fa fa-angle-left"></i>
+            <img class="area-item__picture" src="img/face.png" alt="Matthew Dix response" width="100" height="100">
+            <i class="fa fa-angle-right"></i>
+          </div>
+          <div class="area-item__details item-details">
+            <p class="item-details__description">Lectus sem potenti placerat taciti nullam sit proin lacus socii, Lectus sem potenti placerat taciti nullam sit proin lacus socii, Lectus sem potenti placerat taciti nullam sit proin lacus socii</p>
+            <div class="item-details__credentials">
+              <b class="item-details__name">John Doe</b>
+              <span class="name-divider">-</span>
+              <b class="item-details__profession">Envato</b>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="main-about__blog blog">
+      <div class="blog__block block-intro">
+        <h2 class="block-intro__title">Blog</h2>
+        <b class="block-intro__header">&</b>
+        <p class="block-intro__description">Nulla nullam a mattis semper a vestibulum commodo mi consectetu</p>
+      </div>
+      <div class="blog__preview blog-area">
+        <article class="blog-area__item">
+          <div class="blog-area__details blog-details">
+            <a class="blog-details__name" href="#">Aptent id id inceptos nam pretium</a>
+            <p class="blog-details__description">Id nulla cum mi diam dui quam mi donec dui parturient cum susci. Id nulla cum mi diam dui quam mi donec dui parturient cum susci.</p>
+            <button class="blog-details__btn" type="button">Read more</button>
+          </div>
+        </article>
+        <article class="blog-area__item">
+          <div class="blog-area__details blog-details">
+            <a class="blog-details__name" href="#">Aptent id id inceptos nam pretium</a>
+            <p class="blog-details__description">Id nulla cum mi diam dui quam mi donec dui parturient cum susci. Id nulla cum mi diam dui quam mi donec dui parturient cum susci.</p>
+            <button class="blog-details__btn" type="button">Read more</button>
+          </div>
+        </article>
+        <article class="blog-area__item">
+          <div class="blog-area__details blog-details">
+            <a class="blog-details__name" href="#">Aptent id id inceptos nam pretium</a>
+            <p class="blog-details__description">Id nulla cum mi diam dui quam mi donec dui parturient cum susci. Id nulla cum mi diam dui quam mi donec dui parturient cum susci.</p>
+            <button class="blog-details__btn" type="button">Read more</button>
+          </div>
+        </article>
+        <article class="blog-area__item">
+          <div class="blog-area__details blog-details">
+            <a class="blog-details__name" href="#">Aptent id id inceptos nam pretium</a>
+            <p class="blog-details__description">Id nulla cum mi diam dui quam mi donec dui parturient cum susci. Id nulla cum mi diam dui quam mi donec dui parturient cum susci.</p>
+            <button class="blog-details__btn" type="button">Read more</button>
+          </div>
+        </article>
+      </div>
+      <button class="blog__btn" type="button">View all blog post<i class="fa fa-long-arrow-right"></i></button>
+    </section>
+    <section class="main-about__purchase purchase">
+      <div class="purchase__wrapper"> <!--Parallax-->
+        <p class="purchase__title">If you like the theme you just purchased in architurex!</p>
+        <button class="purchase__btn" type="button">Buy now</button>
+      </div>
+    </section>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__company footer-company">
+        <div class="footer-company__logo">
+          <a class="footer-company__link" href="#">Architecture</a><span class="link-last">X</span>
+        </div>
+      </div>
+      <div class="page-footer__social">
+        <ul class="page-footer__list footer-social">
+          <li class="footer-social__item"><a class="footer-social__btn footer-social__btn--fb" href="#"><i class="fa fa-facebook"></i></a></li>
+          <li class="footer-social__item"><a class="footer-social__btn footer-social__btn--tw" href="#"><i class="fa fa-twitter"></i></a></li>
+          <li class="footer-social__item"><a class="footer-social__btn footer-social__btn--gp" href="#"><i class="fa fa-google-plus"></i></a></li>
+          <li class="footer-social__item"><a class="footer-social__btn footer-social__btn--ln" href="#"><i class="fa fa-linkedin"></i></a></li>
+          <li class="footer-social__item"><a class="footer-social__btn footer-social__btn--in" href="#"><i class="fa fa-instagram"></i></a></li>
+        </ul>
+      </div>
+      <div class="page-footer__copyright footer-copyright">
+        <p class="footer-copyright__description">Copyright © 2015Theme Design by Enes Aktaş</p>
+      </div>
+    </footer>
+  </body>
 </html>
